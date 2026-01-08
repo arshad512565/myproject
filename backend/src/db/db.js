@@ -1,8 +1,25 @@
+// import mongoose from "mongoose";
+// function dbconnecter(){
+//     mongoose.connect(process.env.MONGODB_URI).then(()=>{
+//         console.log("Mongodb connected successfully")
+//     })
+// }
+// export default dbconnecter
+
 import mongoose from "mongoose";
-function dbconnecter(){
-    mongoose.connect(process.env.MONGODB_URI).then(()=>{
-        console.log("Mongodb connected successfully")
-//console.log('meda kia kasoor he')
-    })
-}
-export default dbconnecter
+
+const dbconnecter = async () => {
+  try {
+    if (!process.env.MONGODB_URI) {
+      throw new Error("❌ MONGODB_URI is missing! Set it in Render Environment Variables.");
+    }
+
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log("✅ MongoDB connected successfully");
+  } catch (error) {
+    console.error("❌ MongoDB connection failed:", error.message);
+    process.exit(1); // Stop server if DB fails
+  }
+};
+
+export default dbconnecter;
