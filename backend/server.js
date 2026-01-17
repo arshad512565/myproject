@@ -8,8 +8,8 @@
 
 
 
-import dotenv from "dotenv";
-dotenv.config();
+// import dotenv from "dotenv";
+// dotenv.config();
 
 import app from "./src/app.js";
 import dbconnecter from "./src/db/db.js";
