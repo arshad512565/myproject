@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const UserRegister = () => {
   const navigate = useNavigate();
  async function submit (e){
@@ -106,9 +107,7 @@ const UserRegister = () => {
         {/* Footer */}
         <p className="text-center text-sm text-gray-600 mt-6">
           already have a account
-          <a href="#" className="text-indigo-600 font-semibold hover:underline ml-1">
-            Login
-          </a>
+          <Link to={'/user/login'}> Login</Link>
         </p>
       </div>
     </div>
