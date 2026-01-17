@@ -7,7 +7,8 @@ const upload = multer({
 })
 const router = express.Router();
 router.post('/',authmiddleware.authfoodPartnerMiddleware,upload.single('video'),foodController.createfood);
-router.get('/get',authmiddleware.authUsermiddleware,foodController.getfooditem);
+router.get('/get',foodController.getfooditem);
+//     authmiddleware.authUsermiddleware,
 //router.get('/:id',authmiddleware.authUsermiddleware,foodController.getFoodPartnerById)
 export default router
 
