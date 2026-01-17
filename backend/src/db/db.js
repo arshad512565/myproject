@@ -9,6 +9,7 @@
 import mongoose from "mongoose";
 
 const dbconnecter = async () => {
+  console.log("sata",process.env.MONGODB_URI)
   try {
     if (!process.env.MONGODB_URI) {
       throw new Error("❌ MONGODB_URI is missing!");
