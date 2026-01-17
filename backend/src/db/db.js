@@ -15,7 +15,7 @@ const dbconnecter = async () => {
       throw new Error("❌ MONGODB_URI is missing!");
     }
 
-    await mongoose.connect(process.env.MONGODB_URI);
+    await mongoose.connect('mongodb+srv://mrhide:mrhide10@cluster0.6r7kjqe.mongodb.net/reelApp');
 
     console.log("✅ MongoDB connected successfully");
   } catch (error) {
