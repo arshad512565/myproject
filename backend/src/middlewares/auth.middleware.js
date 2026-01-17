@@ -23,6 +23,7 @@ async function authfoodPartnerMiddleware(req,res,next){
 }
 async function authUsermiddleware(req,res,next){
     const token = req.cookies.token;
+    console.log("your token",token)
     if(!token){
         return res.status(400).json({
             message:"Please login user first"
