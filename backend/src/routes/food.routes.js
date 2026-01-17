@@ -10,3 +10,5 @@ router.post('/',authmiddleware.authfoodPartnerMiddleware,upload.single('video'),
 router.get('/get',authmiddleware.authUsermiddleware,foodController.getfooditem);
 //router.get('/:id',authmiddleware.authUsermiddleware,foodController.getFoodPartnerById)
 export default router
+
+//696bc50f4368003ec2d0fb82 partnerId

@@ -2,12 +2,13 @@ import express from "express";
 const app = express();
 app.use(express.json())
 import cookieParser from "cookie-parser";
+app.use(cookieParser());
 import cors from "cors";
 app.use(cors({
     origin:"https://myproject-ashy-sigma.vercel.app",
     credentials:true
 }))
-app.use(cookieParser());
+
 import authRoutes from "./routes/auth.routes.js";
 import router from "./routes/food.routes.js";
 import foodpartner from './routes/food-partner.routes.js'
