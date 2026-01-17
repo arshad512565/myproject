@@ -4,7 +4,7 @@ app.use(express.json())
 import cookieParser from "cookie-parser";
 import cors from "cors";
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://myproject-ashy-sigma.vercel.app",
     credentials:true
 }))
 app.use(cookieParser());
