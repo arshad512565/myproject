@@ -77,12 +77,14 @@ useEffect(() => {
       if (response.data.fooditems) {
         setvideos(response.data.fooditems); 
       }
-    }).catch((error)=>{
-        console.log('point 4 in catch',error)
-        navigate("/user/login")
-    }
-     
-    )
+    }).catch((error) => {
+  console.log("API Error =", error);
+
+  if (error.response?.status === 401) {
+    navigate("/user/login");
+  }
+});
+
 }, [])
  console.log('point 5 last')
   useEffect(() => {
