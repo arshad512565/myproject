@@ -99,7 +99,14 @@ async function registerFoodPartner(req,res){
         })
     }
    const token = jwt.sign({id:partner._id},process.env.SECRETKEY)
-    res.cookie("token",token)
+  //  res.cookie("token",token)
+    res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+  maxAge: 7 * 24 * 60 * 60 * 1000
+});
+
     res.status(200).json({
         message:"Account created successfully",
         id:partner._id,
