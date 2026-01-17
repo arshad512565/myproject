@@ -81,7 +81,7 @@ useEffect(() => {
   console.log("API Error =", error);
 
   if (error.response?.status === 401) {
-    navigate("/user/login");
+    navigate("/user/register");
   }
 });
 
