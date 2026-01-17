@@ -82,9 +82,7 @@ const UserLogin = () => {
         {/* Footer */}
         <p className="text-center text-sm text-gray-600 mt-6">
           Don’t have an account?
-          <a href="#" className="text-indigo-600 font-semibold hover:underline ml-1">
-            <Link to={'/user/register'}>Sign up</Link>
-          </a>
+           <Link to={'/user/register'}>Sign up</Link>
         </p>
       </div>
     </div>
