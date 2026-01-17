@@ -22,6 +22,7 @@ const dbconnecter = async () => {
     console.error("❌ MongoDB connection failed:", error.message);
     process.exit(1);
   }
+  console.log("sata 2222",process.env.MONGODB_URI)
 };
 
 export default dbconnecter;
