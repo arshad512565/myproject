@@ -70,7 +70,7 @@ const Home = () => {
 const [videos, setvideos] = useState([])
  console.log('point 2')
 useEffect(() => {
-  axios.get("http://localhost:4500/api/food/get",{withCredentials:true})
+  axios.get("https://myproject-zhmv.onrender.com/get",{withCredentials:true})
     .then((response) => {
       // navigate("/user/login")
      console.log("API Response =", response.data);
