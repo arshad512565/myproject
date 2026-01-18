@@ -10,7 +10,7 @@ const UserRegister = () => {
      const lastName = e.target.lastName.value;
       const email = e.target.email.value;
        const password = e.target.password.value;
-     const response = await axios.post('https://myproject-zhmv.onrender.com/api/auth/user/login',{
+     const response = await axios.post('https://myproject-zhmv.onrender.com/api/auth/user/register',{
         fullName:firstName+" "+lastName,
         email,password
       },{withCredentials:true})

@@ -72,7 +72,6 @@ const [videos, setvideos] = useState([])
 useEffect(() => {
   axios.get("https://myproject-zhmv.onrender.com/api/food/get")
     .then((response) => {
-      // navigate("/user/login")
      console.log("API Response =", response.data);
       if (response.data.fooditems) {
         setvideos(response.data.fooditems); 
