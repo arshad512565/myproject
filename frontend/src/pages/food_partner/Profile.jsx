@@ -27,7 +27,13 @@ const Profile = () => {
    console.log("your videos",videos)
    const videoaction = (video)=>{
     if(!video) return;
-    video.play();
+
+    if(video.paused){
+       video.play();
+    }else{
+      video.pause();
+    }
+   
     console.log(video)
    }
   return (
