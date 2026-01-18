@@ -122,7 +122,6 @@ useEffect(() => {
           style={styles.video}
           className="h-[100dvh] snap-start flex items-center justify-center bg-black"
           loop
-          muted
           playsInline
           autoPlay
         />
