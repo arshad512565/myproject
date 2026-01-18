@@ -70,7 +70,7 @@ const Home = () => {
 const [videos, setvideos] = useState([])
  console.log('point 2')
 useEffect(() => {
-  axios.get("https://myproject-zhmv.onrender.com/api/food/get")
+  axios.get("https://myproject-zhmv.onrender.com/api/food/get",{withCredentials:true})
     .then((response) => {
      console.log("API Response =", response.data);
       if (response.data.fooditems) {
