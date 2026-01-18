@@ -130,7 +130,7 @@ useEffect(() => {
           loop
           playsInline
           muted
-          autoPlay
+          // autoPlay
         />
         <div className="overlay">
           <p>{src.description}</p>
