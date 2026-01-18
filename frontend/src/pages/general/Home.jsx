@@ -129,7 +129,7 @@ useEffect(() => {
           className="h-[100dvh] snap-start flex items-center justify-center bg-black"
           loop
           playsInline
-          muted
+          // muted
           // autoPlay
         />
         <div className="overlay">
