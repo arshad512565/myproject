@@ -107,15 +107,21 @@ useEffect(() => {
 
     return () => observer.disconnect();
   }, []);
-  const videoaction = ()=>{
-    
+  const togglePlay = (video)=>{
+     if (!video) return;
+
+  if (video.paused) {
+    video.play().catch(() => {});
+  } else {
+    video.pause();
+  }
   }
   return (
     <div> 
     <div style={styles.container} className="fixed inset-0 bg-black snap-y snap-mandatory overflow-hidden touch-pan-y">
       {videos.map((src, index) =>  (
         <>
-        <video onClick={videoaction} 
+        <video onClick={(e) => togglePlay(e.target)} 
           key={index}
           ref={(el) => (videoRefs.current[index] = el)}
           src={src.video}
