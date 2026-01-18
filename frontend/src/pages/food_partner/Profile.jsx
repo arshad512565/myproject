@@ -10,7 +10,7 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4500/api/partner/${profile}`, {
+      .get(`https://myproject-zhmv.onrender.com/api/partner/${profile}`, {
         withCredentials: true,
       })
       .then((data) => {
