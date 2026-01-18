@@ -26,6 +26,8 @@ const Profile = () => {
   console.log(User);
    console.log("your videos",videos)
    const videoaction = (video)=>{
+    if(!video) return;
+    video.play();
     console.log(video)
    }
   return (
@@ -64,7 +66,7 @@ const Profile = () => {
           <div className="flex flex-wrap w-full">
             {videos.map((video,idx)=>{
               return (
-                 <video onClick={()=>{videoaction(video)}}
+                 <video onClick={(e)=>{videoaction(e.target)}}
               className="w-50"
               src={video.video}
               autoPlay
