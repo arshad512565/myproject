@@ -25,6 +25,9 @@ const Profile = () => {
   }, []);
   console.log(User);
    console.log("your videos",videos)
+   const videoaction = (video)=>{
+    console.log(video)
+   }
   return (
     <div className="container bg-gray-900 h-svh text-amber-50">
       <div className="main">
@@ -61,10 +64,11 @@ const Profile = () => {
           <div className="flex flex-wrap w-full">
             {videos.map((video,idx)=>{
               return (
-                 <video
+                 <video onClick={()=>{videoaction(video)}}
               className="w-50"
               src={video.video}
               autoPlay
+              muted
             >
             </video>
               )
