@@ -26,7 +26,8 @@ async function authUsermiddleware(req,res,next){
     console.log("your token",token)
     if(!token){
         return res.status(401).json({
-            message:"Please login user first"
+            message:"Please login user first",
+            token:`Your Token : ${token}`
         })
     }
     try {
