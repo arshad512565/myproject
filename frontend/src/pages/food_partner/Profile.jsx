@@ -75,8 +75,8 @@ const Profile = () => {
                  <video onClick={(e)=>{videoaction(e.target)}}
               className="w-50"
               src={video.video}
-              autoPlay
-              muted
+              // autoPlay
+              // muted
             >
             </video>
               )
